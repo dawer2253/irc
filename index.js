@@ -16,7 +16,7 @@ app.get("/chat", (req, res) => {
     if (messages.length == 0 || req.query.last == messages[messages.length - 1].id || req.query.last == -1) {
         subscribers.push(res)
     } else {
-        const toSend = messages.filter(e => e.id > req.query.lastMessage)
+        const toSend = messages.filter(e => e.id > req.query.last)
         res.send(toSend)
     }
 })
