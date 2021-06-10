@@ -22,7 +22,7 @@ async function getMessages() {
             generateMessage(m.message)
         })
         console.log(data.length)
-        lastMessage = data[data.length - 1].id
+        if (data.length > 0) lastMessage = data[data.length - 1].id
     }
     getMessages()
 }
