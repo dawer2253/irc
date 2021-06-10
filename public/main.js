@@ -21,7 +21,7 @@ async function getMessages() {
         data.forEach(m => {
             generateMessage(m.message)
         })
-        console.log(data.length)
+        console.log(data)
         if (data.length > 0) lastMessage = data[data.length - 1].id
     }
     getMessages()
